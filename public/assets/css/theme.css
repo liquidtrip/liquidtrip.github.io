@@ -19644,6 +19644,16 @@ iframe {
 -----------------------------------------------*/
 
 /*# sourceMappingURL=theme.css.map */
+.logo{
+  height: 70px;
+}
+@media (max-width: 992px) {
+    .logo {
+        height: 50px;
+    }
+}
+
+
 .typed-words {
   position: relative;
   color: #f54b30;
