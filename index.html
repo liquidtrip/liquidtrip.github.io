@@ -482,7 +482,6 @@
           showCursor: true,
           preStringTyped: (arrayPos, self) => {
             arrayPos++;
-            console.log(arrayPos);
             $('.slides img').removeClass('active');
             $('.slides img[data-id="'+arrayPos+'"]').addClass('active');
           }
