@@ -19482,7 +19482,7 @@ iframe {
 .hero-title {
   font-family: "Volkhov", "DM Serif Display", cursive;
   font-weight: 700;
-  font-size: 2.88651rem;
+  font-size: 2rem;
   color: #181E4B;
   margin-bottom: 5px;
   position: relative;
@@ -19491,13 +19491,13 @@ iframe {
 
 @media (min-width: 1200px) {
   .hero-title {
-    font-size: 4.62363rem;
+    font-size: 3.5rem;
   }
 }
 
 @media (min-width: 1400px) {
   .hero-title {
-    font-size: 5.20158rem;
+    font-size: 4rem;
   }
 }
 
