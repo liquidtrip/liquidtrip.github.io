@@ -19682,6 +19682,16 @@ iframe {
 
 /*CARD FLIPPABILI*/
 
+.rounded-card {
+  border-radius: 3rem 3rem 0.5rem 3rem !important;
+  background: linear-gradient(135deg, transparent 0%, transparent 92%, transparent 0%, #f54b30 0%)
+}
+
+.rounded-card_inverted {
+  border-radius: 3rem 3rem 3rem 0.5rem !important;
+  background: linear-gradient(225deg, transparent 0%, transparent 92%, transparent 0%, #f54b30 0%)
+}
+
 .flip-card:hover .front {
     transform: rotateY(180deg);
 }
