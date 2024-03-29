@@ -708,18 +708,48 @@
 
         });
       })
-
-
-      document.querySelectorAll('.flip-card').forEach(card => {
-        card.addEventListener('touchstart', () => {
-          card.classList.add('flipped');
-        });
-
-        card.addEventListener('touchend', () => {
-          card.classList.remove('flipped');
-        });
-      });
     </script>
+    <script>
+        // Verifica se il dispositivo è un dispositivo mobile
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        // Verifica se il dispositivo è un tablet
+        function isTablet() {
+            // Lasciare che i dispositivi che hanno una larghezza massima di 991px vengano considerati come tablet
+            return window.innerWidth <= 991 && window.innerWidth > 767;
+        }
+
+        // Verifica se l'utente sta utilizzando un dispositivo mobile o un tablet
+        function isMobileOrTablet() {
+            return isMobileDevice() || isTablet();
+        }
+
+        document.querySelectorAll('.flip-card').forEach(card => {
+            let isFlipped = false;
+
+            // Aggiungi l'evento click solo se l'utente sta utilizzando un dispositivo mobile o un tablet
+            if (isMobileOrTablet()) {
+                card.addEventListener('click', () => {
+                    isFlipped = !isFlipped;
+                    card.classList.toggle('flipped');
+
+                    const front = card.querySelector('.front');
+                    const back = card.querySelector('.back');
+
+                    if (isFlipped) {
+                        front.style.transform = 'rotateY(-180deg)';
+                        back.style.transform = 'rotateY(0deg)';
+                    } else {
+                        front.style.transform = 'rotateY(0deg)';
+                        back.style.transform = 'rotateY(180deg)';
+                    }
+                });
+            }
+        });
+    </script>
+
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
   </body>
