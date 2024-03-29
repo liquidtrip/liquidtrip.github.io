@@ -19780,3 +19780,7 @@ iframe {
 .line-container::before {
   z-index: -1; /* Imposta un z-index negativo per posizionare la linea dietro gli altri elementi */
 }
+
+.it {
+  display: none;
+}
