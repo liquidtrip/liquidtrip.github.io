@@ -19751,18 +19751,17 @@ iframe {
 
 .step-container {
   position: relative;
-  padding-left: 30px;
 }
 
 .step-container::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 15px;
   width: 2px;
   height: 0;
-  background: repeating-linear-gradient(to bottom, transparent 0 10px, #aaa 10px 20px);
-  animation: drawLine 5s ease-in-out forwards;
+  background: repeating-linear-gradient(to bottom, transparent 0 10px, #aaa 12px 25px);
+  animation: drawLine 6s ease-in-out infinite;
 }
 
 @keyframes drawLine {
@@ -19770,6 +19769,14 @@ iframe {
     height: 0;
   }
   100% {
-    height: calc(100% - 20px);
+    height: calc(100% - 50px);
   }
+}
+
+.line-container {
+  position: relative;
+}
+
+.line-container::before {
+  z-index: -1; /* Imposta un z-index negativo per posizionare la linea dietro gli altri elementi */
 }
