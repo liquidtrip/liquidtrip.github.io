@@ -19563,6 +19563,7 @@ iframe {
   border: none;
 }
 
+
 .card.service-card:before {
   content: '';
   position: absolute;
@@ -19676,4 +19677,48 @@ iframe {
   left: 0;
   right: 0;
   content: "";
+}
+
+/*CARD FLIPPABILI*/
+.flip-card{
+  background-color: beige;
+}
+
+.flip-card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 1s;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.square-overlay {
+    position: relative;
+    width: 100%; /* Larghezza massima per garantire un ritaglio quadrato */
+    padding-top: 100%; /* Altezza impostata in modo che il div sia quadrato */
+    overflow: hidden;
+}
+
+.square-overlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
