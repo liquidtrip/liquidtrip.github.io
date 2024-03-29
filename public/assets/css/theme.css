@@ -19692,12 +19692,44 @@ iframe {
   background: linear-gradient(225deg, transparent 0%, transparent 92%, transparent 0%, #f54b30 0%)
 }
 
+/* Stili per desktop */
+.flip-card .front {
+  transform: none;
+  transition: transform 1s;
+}
+
+.flip-card .back {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+}
+
 .flip-card:hover .front {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card:hover .back {
+  transform: rotateY(0deg);
+}
+
+/* Stili per dispositivi mobili */
+@media (max-width: 767px) {
+  .flip-card .front {
+    transform: none;
+    transition: transform 0.5s;
+  }
+
+  .flip-card .back {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+  }
+
+  .flip-card.flipped .front {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card.flipped .back {
     transform: rotateY(0deg);
+  }
 }
 
 .front, .back {

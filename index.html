@@ -80,7 +80,7 @@
                     <img class="pt-7 pt-md-0 hero-img" src="public/assets/img/brick.png" alt="hero-header" />
                 </div>
                 <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
-                    <h4 class="text-danger mb-3">THE APULIAN EXPERIENCE IN ONE BRICK</h4><br/>
+                    <h4 class="text-danger mb-3">THE APULIAN EXPERIENCE IN A CARTON OF WATER</h4><br/>
                     <h1 class="hero-title">Unlock the secrets of Puglia: <span class="typed-words"></span></h1>
                     <br/><br/>
                     <div class="text-center text-md-start">
@@ -539,7 +539,7 @@
     <script>
       $(function() {
         var typed = new Typed('.typed-words', {
-          strings: ["Scan"," Sip"," Savor"],
+          strings: ["SCAN"," SIP"," SAVOR"],
           typeSpeed: 100,
           backSpeed: 80,
           backDelay: 1000,
@@ -554,6 +554,17 @@
 
         });
       })
+
+
+      document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('touchstart', () => {
+          card.classList.add('flipped');
+        });
+
+        card.addEventListener('touchend', () => {
+          card.classList.remove('flipped');
+        });
+      });
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
