@@ -19680,9 +19680,6 @@ iframe {
 }
 
 /*CARD FLIPPABILI*/
-.flip-card{
-  background-color: beige;
-}
 
 .flip-card:hover .front {
     transform: rotateY(180deg);
