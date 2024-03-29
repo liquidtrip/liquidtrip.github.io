@@ -19744,3 +19744,39 @@ iframe {
 .color-pastel-4 {
   background-color: #c8e6c9; /* verde pastello */
 }
+
+
+
+/*LINEA TRATTEGGIATA*/
+
+.step-container {
+  position: relative;
+}
+
+.step-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 0;
+  background: repeating-linear-gradient(to bottom, transparent 0 10px, #aaa 12px 25px);
+  animation: drawLine 6s ease-in-out infinite;
+}
+
+@keyframes drawLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(100% - 50px);
+  }
+}
+
+.line-container {
+  position: relative;
+}
+
+.line-container::before {
+  z-index: -1; /* Imposta un z-index negativo per posizionare la linea dietro gli altri elementi */
+}
