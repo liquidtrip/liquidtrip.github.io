@@ -19819,3 +19819,22 @@ iframe {
 .it {
   display: none;
 }
+
+
+@media (max-width: 991.98px) {
+  .counter-wrap {
+    margin-bottom: 30px; } }
+
+.counter-wrap .caption {
+  color: #1A374D;
+  font-weight: bold; }
+
+.counter-wrap .counter {
+  font-size: 3rem; }
+
+.counter-wrap .counter span {
+  color: #1A374D; }
+  
+@media (max-width: 991.98px) {
+  .counter-wrap .counter {
+    font-size: 2.5rem; } }
