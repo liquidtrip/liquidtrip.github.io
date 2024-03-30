@@ -19488,7 +19488,7 @@ iframe {
 }
 
 .carousel-inner {
-  overflow: unset;
+  overflow: hidden;
 }
 
 .hero-title {
@@ -19838,4 +19838,3 @@ iframe {
   .counter-wrap .counter {
     font-size: 2.5rem; } }
 }
-
