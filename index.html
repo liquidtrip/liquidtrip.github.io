@@ -82,8 +82,16 @@
                     <h4 class="text-danger mb-3"><p class="en">THE APULIAN EXPERIENCE IN A CARTON OF WATER</p><p class="it">ESPERIENZE PUGLIESI IN UN BRICK</p></h4><br/>
                     <h1 class="hero-title"><p class="en">Unlock the secrets of Puglia: <span class="typed-words-en"></span></p> <p class="it">Sblocca i segreti della Puglia: <span class="typed-words-it"></span></p></h1>
                     <br/><br/>
+                    <div class="d-flex flex-row justify-content-end mb-4">
+                      <div class="p-3 me-3 border" style="border-radius: 15px 15px 0 15px; background-color: #fbfbfb; position: relative;">
+                        <div style="position: absolute; top: -15px; right: -15px; width: 0; height: 0; border-style: solid; border-width: 0 20px 20px 0; border-color: transparent #fbfbfb transparent transparent;"></div>
+                        <h3 class="text-danger typed-welcome"></h3>
+                      </div>
+                    </div>
+                    
+                   
                     <div class="text-center text-md-start">
-                        <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" href="#service" role="button"><span class="en">Find out more</span><span class="it">Scopri di più</span></a>
+                        <a id="unlock-button" class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" href="#service" role="button"><span class="en">Unlock</span><span class="it">Sblocca</span></a>
                     </div>
                 </div>
             </div>
@@ -496,6 +504,23 @@
             $('.slides img[data-id="'+arrayPos+'"]').addClass('active');
           }
 
+        });
+
+        var typed3 = new Typed('.typed-welcome', {
+          strings: ["Welcome, traveler :) You just brought your stay in Puglia to the next level ! Tap the button below to discover exclusive promotions tailored just for you!"],
+          typeSpeed: 100,
+          backSpeed: 80,
+          backDelay: 1000,
+          startDelay: 1000,
+          loop: false,
+          showCursor: false,
+          preStringTyped: (arrayPos, self) => {
+            $('.slides img').removeClass('active');
+            $('.slides img[data-id="'+arrayPos+'"]').addClass('active');
+          },
+          onComplete: function(self) {
+            $('#unlock-button').show();
+          }
         });
       })
     </script>
