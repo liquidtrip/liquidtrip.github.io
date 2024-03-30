@@ -19666,11 +19666,11 @@ iframe {
 }
 
 
-.typed-words {
+.typed-words-en .typed-words-it{
   position: relative;
   color: #f54b30;
 }
-.typed-words:before {
+.typed-words-en:before .typed-words-it:before {
   position: absolute;
   height: 7px;
   /*background-color: #f54b30;*/
