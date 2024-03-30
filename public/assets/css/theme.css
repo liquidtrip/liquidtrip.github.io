@@ -19836,5 +19836,17 @@ iframe {
   
 @media (max-width: 991.98px) {
   .counter-wrap .counter {
-    font-size: 2.5rem; } }
+    font-size: 2.5rem; } 
+}
+
+
+.carousel-item {
+  height: 250px; /* Imposta l'altezza desiderata per tutte le immagini nel carosello */
+  overflow: hidden; /* Nasconde eventuali immagini più grandi */
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
