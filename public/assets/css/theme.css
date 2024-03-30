@@ -19666,11 +19666,11 @@ iframe {
 }
 
 
-.typed-words-en .typed-words-it{
+.typed-words-en, .typed-words-it{
   position: relative;
   color: #f54b30;
 }
-.typed-words-en:before .typed-words-it:before {
+.typed-words-en:before, .typed-words-it:before {
   position: absolute;
   height: 7px;
   /*background-color: #f54b30;*/
@@ -19814,8 +19814,4 @@ iframe {
 
 .line-container::before {
   z-index: -1; /* Imposta un z-index negativo per posizionare la linea dietro gli altri elementi */
-}
-
-.it {
-  display: none;
 }
