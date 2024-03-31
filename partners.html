@@ -217,7 +217,7 @@
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="icon-group align-items-center ml-auto">
                       <span class="btn icon-item"><img src="public/assets/img/steps/instagram.svg" alt="" /></span>
-                      <span class="btn icon-item"> <img src="public/assets/img/steps/map.svg" alt="" /></span>
+                      <span class="map-button btn icon-item"> <img src="public/assets/img/steps/map.svg" alt="" /></span>
                     </div>
                     <div class="position-relative">
                       <span class="fs-3 fw-medium">10 €</span>
@@ -275,7 +275,7 @@
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="icon-group align-items-center ml-auto">
                       <span class="btn icon-item"><img src="public/assets/img/steps/instagram.svg" alt="" /></span>
-                      <span class="btn icon-item"> <img src="public/assets/img/steps/map.svg" alt="" /></span>
+                      <span class="map-button btn icon-item"> <img src="public/assets/img/steps/map.svg" alt="" /></span>
                     </div>
                     <div class="position-relative">
                       <span class="fs-3 fw-medium">20 €</span>
@@ -303,7 +303,7 @@
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="icon-group align-items-center ml-auto">
                       <span class="btn icon-item"><img src="public/assets/img/steps/instagram.svg" alt="" /></span>
-                      <span class="btn icon-item"> <img src="public/assets/img/steps/map.svg" alt="" /></span>
+                      <span class="map-button btn icon-item"> <img src="public/assets/img/steps/map.svg" alt="" /></span>
                     </div>
                     <div class="position-relative">
                       <span class="fs-3 fw-medium">10 €</span>
@@ -652,6 +652,10 @@
             $('.en').show();
             $('.it').hide();
             $('#navbarDropdown').text('EN');
+        });
+
+        $('.map-button').click(function(){
+          window.open("https://www.google.com/maps/place/Magda/@41.1198904,16.8686323,17z/data=!4m14!1m7!3m6!1s0x1347e85dd679a98f:0xb4944627b38db51!2sMagda!8m2!3d41.1198864!4d16.8712072!16s%2Fg%2F1tfy4p4f!3m5!1s0x1347e85dd679a98f:0xb4944627b38db51!8m2!3d41.1198864!4d16.8712072!16s%2Fg%2F1tfy4p4f?entry=ttu");
         });
       });
 
