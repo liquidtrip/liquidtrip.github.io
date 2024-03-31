@@ -19508,6 +19508,7 @@ iframe {
   margin-bottom: 5px;
   position: relative;
   z-index: 1;
+  text-align: left;
 }
 
 @media (min-width: 1200px) {
