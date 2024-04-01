@@ -551,6 +551,27 @@
     <script>
 
       $(document).ready(function(){
+        if (localStorage.getItem('language') == 'IT'){
+          $('.it').show();
+          $('.en').hide();
+          $('#navbarDropdown').text('IT');
+        }
+        
+        // Imposta l'azione per #it-item
+        $("#it-item").click(function(){
+            localStorage.setItem('language', 'IT');
+            $('.it').show();
+            $('.en').hide();
+            $('#navbarDropdown').text('IT');
+        });
+
+        // Imposta l'azione per #en-item
+        $("#en-item").click(function(){
+          localStorage.setItem('language', 'EN');
+            $('.en').show();
+            $('.it').hide();
+            $('#navbarDropdown').text('EN');
+        });
 
         // Incrementa i contatori al caricamento della pagina
         $('.counter > span').each(function(){
@@ -570,19 +591,7 @@
 
         $('.carousel').carousel();
 
-        // Imposta l'azione per #it-item
-        $("#it-item").click(function(){
-            $('.it').show();
-            $('.en').hide();
-            $('#navbarDropdown').text('IT');
-        });
-
-        // Imposta l'azione per #en-item
-        $("#en-item").click(function(){
-            $('.en').show();
-            $('.it').hide();
-            $('#navbarDropdown').text('EN');
-        });
+      
 
         $('.map-button').click(function(){
           window.open("https://www.google.com/maps/place/Magda/@41.1198904,16.8686323,17z/data=!4m14!1m7!3m6!1s0x1347e85dd679a98f:0xb4944627b38db51!2sMagda!8m2!3d41.1198864!4d16.8712072!16s%2Fg%2F1tfy4p4f!3m5!1s0x1347e85dd679a98f:0xb4944627b38db51!8m2!3d41.1198864!4d16.8712072!16s%2Fg%2F1tfy4p4f?entry=ttu");

@@ -57,7 +57,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
-              <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="./partners.html">For Partners</a></li>
+              <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="./partners.html"><span class="en">For Partners</span><span class="it">Per i Partner</span></a></li>
               <li class="nav-item dropdown px-3 px-lg-0"> <a class="d-inline-block ps-0 py-2 pe-3 text-decoration-none dropdown-toggle fw-medium" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">EN</a>
                 <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg" style="border-radius:0.3rem;" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" id="en-item">EN</a></li>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
                     <h4 class="text-danger mb-3"><p class="en">THE APULIAN EXPERIENCE IN A CARTON OF WATER</p><p class="it">ESPERIENZE PUGLIESI IN UN BRICK</p></h4><br/>
-                    <h1 class="hero-title"><p class="en">Unlock the secrets of Puglia: <span class="typed-words-en"></span></p> <p class="it">Sblocca i segreti della Puglia: <span class="typed-words-it"></span></p></h1>
+                    <h1 class="hero-title"><p class="en">Unlock the secrets of Puglia: <span class="typed-words-en"></span></p> <p class="it">Sblocca i segreti della Puglia: <br><span class="typed-words-it"></span></p></h1>
                     <br/><br/>
                     <div class="d-flex flex-row justify-content-end mb-4">
                       <div class="p-3 me-3 border" style="border-radius: 15px 15px 0 15px; background-color: #fbfbfb; position: relative;">
@@ -460,13 +460,21 @@
     <script>
 
       $(document).ready(function(){
+          if (localStorage.getItem('language') == 'IT'){
+              $('.it').show();
+              $('.en').hide();
+              $('#navbarDropdown').text('IT');
+          }
+
           $("#it-item").click(function(){
+              localStorage.setItem('language', 'IT');
               $('.it').show();
               $('.en').hide();
               $('#navbarDropdown').text('IT');
           });
 
           $("#en-item").click(function(){
+              localStorage.setItem('language', 'EN');
               $('.en').show();
               $('.it').hide();
               $('#navbarDropdown').text('EN');
