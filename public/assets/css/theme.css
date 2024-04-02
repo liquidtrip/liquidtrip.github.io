@@ -19861,7 +19861,7 @@ iframe {
   position: absolute;
   height: 2px;
   left: var(--left);
-  top: 35%;
+  top: 32%;
   background: repeating-linear-gradient(
     to right,
     transparent 0 10px,
