@@ -19850,10 +19850,18 @@ iframe {
   padding: 0 1rem;
 }
 
+:root {
+  --distance: 0; /* Definisci una variabile CSS per la distanza */
+  --left: 0; /* Definisci una variabile CSS per la distanza */
+}
+
+
 .step-container_horizontal::before {
   content: "";
   position: absolute;
   height: 2px;
+  left: var(--left);
+  top: 35%;
   background: repeating-linear-gradient(
     to right,
     transparent 0 10px,
@@ -19862,12 +19870,13 @@ iframe {
   animation: drawLineHorizontal 6s ease-in-out infinite;
 }
 
+
 @keyframes drawLineHorizontal {
   0% {
     width: 0;
   }
   100% {
-    width: 100%;
+    width: var(--distance); /* Usa la variabile CSS per la distanza */
   }
 }
 
@@ -19933,4 +19942,8 @@ iframe {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.qr_code{
+  display:none;
 }

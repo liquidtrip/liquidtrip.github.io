@@ -74,7 +74,7 @@
         <!--/.bg-holder-->
 
         <div class="container">
-            <div class="mt-5 alert alert-success alert-dismissible fade show" role="alert">
+            <div class="mt-5 alert alert-success alert-dismissible fade show qr_code" role="alert">
               <span class="en"> <strong>Thanks for scanning me!</strong> Enjoy a complete apulian experience.</span>
               <span class="it"> <strong>Grazie per avermi scannerizzato!</strong> Goditi un'esperienza pugliese completa.</span>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -145,10 +145,10 @@
 
           </div>
           
-          <div class="mb-7 text-center">
+          <div class="mb-7 text-center qr_code">
             <div class="step-container_horizontal">
               <div class="step-item_horizontal">
-                <div class="step-icon_horizontal color-pastel-1 rounded-circle"></div>
+                <div class="step-icon_horizontal color-pastel-1 rounded-circle" id="partenza"></div>
                 <div class="step-content_horizontal">
                   <h5 class="text-secondary fw-bold fs--2">
                     <span class="en">street food</span><span class="it">street food</span>
@@ -173,7 +173,7 @@
                 </div>
               </div>
               <div class="step-item_horizontal">
-                <div class="step-icon_horizontal color-pastel-4 rounded-circle"></div>
+                <div class="step-icon_horizontal color-pastel-4 rounded-circle" id="arrivo"></div>
                 <div class="step-content_horizontal">
                   <h5 class="text-secondary fw-bold fs--2">
                     <span class="en">restaurant</span><span class="it">ristorante</span>
@@ -183,7 +183,7 @@
             </div>
           </div>
 
-          <div class="text-center">
+          <div class="text-center qr_code">
               <a id="unlock-button" class="btn btn-primary btn-lg mb-3 mb-md-0 border-0 primary-btn-shadow" href="#service" role="button"><span class="en">UNLOCK THE 4 PROPOSALS</span><span class="it">SBLOCCA LE 4 PROPOSTE</span></a>
           </div>
 
@@ -198,7 +198,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="booking">
+      <section id="how_it_works">
 
         <div class="container">
           <div class="row align-items-center">
@@ -395,42 +395,11 @@
     <script src="public/assets/js/theme.js"></script>
     <script src="public/assets/js/jquery-3.4.1.min.js"></script>
     <script src="public/assets/js/typed.js"></script>
+    <script src="public/assets/js/my_js.js"></script>
     <script>
-
+      
       $(document).ready(function(){
-          /*Prima apertura*/
-          if(navigator.language == 'it-IT' && ! localStorage.getItem('language') ){
-              $('.it').show();
-              $('.en').hide();
-              $('#navbarDropdown').text('IT');
-              localStorage.setItem('language', 'IT');
-          }else if(navigator.language != 'it-IT' && ! localStorage.getItem('language') ){
-              $('.en').show();
-              $('.it').hide();
-              $('#navbarDropdown').text('EN');
-              localStorage.setItem('language', 'EN');
-          }
-
-          if (localStorage.getItem('language') == 'IT'){
-              $('.it').show();
-              $('.en').hide();
-              $('#navbarDropdown').text('IT');
-          }
-
-          $("#it-item").click(function(){
-              localStorage.setItem('language', 'IT');
-              $('.it').show();
-              $('.en').hide();
-              $('#navbarDropdown').text('IT');
-          });
-
-          $("#en-item").click(function(){
-              localStorage.setItem('language', 'EN');
-              $('.en').show();
-              $('.it').hide();
-              $('#navbarDropdown').text('EN');
-          });
-          
+          document_ready();
       });
 
       $(function() {

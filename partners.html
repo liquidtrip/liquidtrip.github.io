@@ -159,7 +159,7 @@
           <div class="mb-7 text-center">
             <div class="step-container_horizontal">
               <div class="step-item_horizontal">
-                <div class="step-icon_horizontal color-pastel-1 rounded-circle"></div>
+                <div class="step-icon_horizontal color-pastel-1 rounded-circle" id="partenza"></div>
                 <div class="step-content_horizontal">
                   <h5 class="text-secondary fw-bold fs--2">
                     <span class="en">street food</span><span class="it">street food</span>
@@ -184,7 +184,7 @@
                 </div>
               </div>
               <div class="step-item_horizontal">
-                <div class="step-icon_horizontal color-pastel-4 rounded-circle"></div>
+                <div class="step-icon_horizontal color-pastel-4 rounded-circle" id="arrivo"></div>
                 <div class="step-content_horizontal">
                   <h5 class="text-secondary fw-bold fs--2">
                     <span class="en">restaurant</span><span class="it">ristorante</span>
@@ -585,45 +585,12 @@
     <script src="public/assets/js/jquery-3.4.1.min.js"></script>
     <script src="public/assets/js/jquery.animateNumber.min.js"></script>
     <script src="public/assets/js/typed.js"></script>
-    
+    <script src="public/assets/js/my_js.js"></script>
 
     <script>
 
       $(document).ready(function(){
-        /*Prima apertura*/
-        if(navigator.language == 'it-IT' && ! localStorage.getItem('language') ){
-            $('.it').show();
-            $('.en').hide();
-            $('#navbarDropdown').text('IT');
-            localStorage.setItem('language', 'IT');
-        }else if(navigator.language != 'it-IT' && ! localStorage.getItem('language') ){
-            $('.en').show();
-            $('.it').hide();
-            $('#navbarDropdown').text('EN');
-            localStorage.setItem('language', 'EN');
-        }
-
-        if (localStorage.getItem('language') == 'IT'){
-          $('.it').show();
-          $('.en').hide();
-          $('#navbarDropdown').text('IT');
-        }
-        
-        // Imposta l'azione per #it-item
-        $("#it-item").click(function(){
-            localStorage.setItem('language', 'IT');
-            $('.it').show();
-            $('.en').hide();
-            $('#navbarDropdown').text('IT');
-        });
-
-        // Imposta l'azione per #en-item
-        $("#en-item").click(function(){
-          localStorage.setItem('language', 'EN');
-            $('.en').show();
-            $('.it').hide();
-            $('#navbarDropdown').text('EN');
-        });
+        document_ready();
 
         // Incrementa i contatori al caricamento della pagina
         $('.counter > span').each(function(){
@@ -642,12 +609,11 @@
         });
 
         $('.carousel').carousel();
-
-      
-
+        
         $('.map-button').click(function(){
           window.open("https://www.google.com/maps/place/Magda/@41.1198904,16.8686323,17z/data=!4m14!1m7!3m6!1s0x1347e85dd679a98f:0xb4944627b38db51!2sMagda!8m2!3d41.1198864!4d16.8712072!16s%2Fg%2F1tfy4p4f!3m5!1s0x1347e85dd679a98f:0xb4944627b38db51!8m2!3d41.1198864!4d16.8712072!16s%2Fg%2F1tfy4p4f?entry=ttu");
         });
+
       });
 
       
