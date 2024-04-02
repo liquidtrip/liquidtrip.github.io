@@ -5601,7 +5601,6 @@ fieldset:disabled .btn {
 .alert {
   position: relative;
   padding: 1rem 1rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 1.5rem;
 }
@@ -8553,6 +8552,12 @@ fieldset:disabled .btn {
 
 .mt-5 {
   margin-top: 2.5rem !important;
+}
+
+@media (max-width: 1023px) {
+  .mobile-mt-5 {
+    margin-top: 3rem !important; /* Adjust this value as needed */
+  }
 }
 
 .mt-6 {
@@ -18751,6 +18756,13 @@ iframe {
   z-index: 0;
 }
 
+@media (max-width: 767px) {
+  .bg-holder {
+    display: none;
+  }
+}
+
+
 .bg-holder.bg-right {
   left: auto;
   right: 0;
@@ -19508,18 +19520,17 @@ iframe {
   margin-bottom: 5px;
   position: relative;
   z-index: 1;
-  text-align: left;
 }
 
 @media (min-width: 1200px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 }
 
 @media (min-width: 1400px) {
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
