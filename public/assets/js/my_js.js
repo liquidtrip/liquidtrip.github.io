@@ -12,6 +12,7 @@ function document_ready(){
     if (source === 'qr_code') {
         $('.qr_code').show();
         $('#how_it_works').hide();
+        $('#subtitle').hide();
     }
 
     /*Prima apertura*/
