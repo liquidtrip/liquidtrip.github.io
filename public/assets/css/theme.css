@@ -19319,6 +19319,10 @@ iframe {
 /* -------------------------------------------------------------------------- */
 /*        Heading                        Background                               */
 /* -------------------------------------------------------------------------- */
+.footer{
+  background-color: #fff1da;
+}
+
 .footer-heading-color {
   color: #080809;
 }
@@ -19753,7 +19757,6 @@ iframe {
 }
 
 .card {
-  min-height: 300px;
   height: auto;
 }
 
@@ -19789,7 +19792,7 @@ iframe {
 }
 
 .color-pastel-1 {
-  background-color: #ffefd5; /* giallo pastello */
+  background-color: peachpuff; /* giallo pastello */
 }
 
 .color-pastel-2 {
@@ -19797,11 +19800,11 @@ iframe {
 }
 
 .color-pastel-3 {
-  background-color: #ffcdd2; /* rosso pastello */
+  background-color: lightblue; /* rosso pastello */
 }
 
 .color-pastel-4 {
-  background-color: #c8e6c9; /* verde pastello */
+  background-color: lightpink; /* verde pastello */
 }
 
 
