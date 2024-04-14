@@ -19682,11 +19682,11 @@ iframe {
 
 /*# sourceMappingURL=theme.css.map */
 .logo{
-  height: 70px;
+  height: 90px;
 }
 @media (max-width: 992px) {
     .logo {
-        height: 50px;
+        height: 70px;
     }
 }
 
