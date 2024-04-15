@@ -19526,6 +19526,10 @@ iframe {
   z-index: 1;
 }
 
+.typed-cursor{
+  color: #f54b30;
+}
+
 @media (min-width: 1200px) {
   .hero-title {
     font-size: 3.2rem;
@@ -19682,11 +19686,11 @@ iframe {
 
 /*# sourceMappingURL=theme.css.map */
 .logo{
-  height: 90px;
+  height: 85px;
 }
 @media (max-width: 992px) {
     .logo {
-        height: 70px;
+        height: 60px;
     }
 }
 

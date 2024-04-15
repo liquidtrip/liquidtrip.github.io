@@ -74,15 +74,15 @@
         <!--/.bg-holder-->
 
         <div class="container">
-            <div class="mt-5 alert alert-success alert-dismissible fade show qr_code" role="alert">
+            <div class="mt-5 alert alert-success alert-dismissible fade show qr_code d-md-none d-block" role="alert">
               <span class="en"> <strong>Thanks for scanning me!</strong> Enjoy a complete apulian experience.</span>
               <span class="it"> <strong>Grazie per avermi scannerizzato!</strong> Goditi un'esperienza pugliese completa.</span>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <div class="row align-items-center">
                 <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
-                    <h5 id='subtitle' class="text-danger mb-3"><p class="en">A COMPLETE APULIAN EXPERIENCE IN A CARTON OF WATER</p><p class="it">UN'ESPERIENZA PUGLIESE COMPLETA IN UN BRICK</p></h5><br/>
-                    <h1 class="hero-title"><p class="en">Unveil the authentic soul of Puglia: <span class="typed-words-en"></span></p> <p class="it">Scopri il lato più autentico della Puglia: <span class="typed-words-it"></span></p></h1>
+                    <h5 class="text-danger mb-3 d-none d-md-block"><p class="en">A COMPLETE APULIAN EXPERIENCE IN A CARTON OF WATER</p><p class="it">UN'ESPERIENZA PUGLIESE COMPLETA IN UN BRICK</p></h5><br/>
+                    <h1 class="hero-title"><p class="en">Unveil the authentic soul of Puglia:<br/><span class="typed-words-en"></span></p> <p class="it">Scopri il lato più autentico della Puglia:<br/><span class="typed-words-it"></span></p></h1>
                     
                 </div>
                 <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end">
@@ -457,10 +457,10 @@
 
       $(function() {
         var typed = new Typed('.typed-words-en', {
-          strings: ["Scan"," Sip"," Savor"],
-          typeSpeed: 100,
+          strings: ["Scan","Sip","Enjoy"],
+          typeSpeed: 80,
           backSpeed: 80,
-          backDelay: 1000,
+          backDelay: 1500,
           startDelay: 1000,
           loop: true,
           showCursor: true,
@@ -472,10 +472,10 @@
 
         });
         var typed2 = new Typed('.typed-words-it', {
-          strings: ["Scannerizza"," Sorseggia"," Assaggia"],
-          typeSpeed: 100,
+          strings: ["Scannerizza","Sorseggia","Divertiti"],
+          typeSpeed: 80,
           backSpeed: 80,
-          backDelay: 1000,
+          backDelay: 1500,
           startDelay: 1000,
           loop: true,
           showCursor: true,
