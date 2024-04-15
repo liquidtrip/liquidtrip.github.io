@@ -48,6 +48,8 @@ function document_ready(){
         $('#navbarDropdown').text('EN');
     });
 
+
+    //PATH TRA PALLINI
     var partenza = $('#partenza');
     var arrivo = $('#arrivo');
     var distance = arrivo.offset().left - partenza.offset().left;
